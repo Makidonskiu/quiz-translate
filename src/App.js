@@ -3,7 +3,23 @@ import React from 'react';
 import { Answers } from './components/Answers';
 
 import './App.css';
-
+const arrSort = [
+  'зі смаком',
+  'маленький',
+  'безвкусний',
+  'підмітати',
+  'сходи',
+  'соседство',
+  'не комфортний',
+  'стікляна криша',
+  'замок',
+  'веранда',
+  'фарбувати',
+  'газон',
+  'просторий',
+  'орендувати',
+  'переїзд',
+];
 const arr = [
   { eng: 'neighborhood', rus: 'соседство' },
   { eng: 'uncomfortable', rus: 'не комфортний' },
@@ -30,11 +46,12 @@ function App() {
   let findEng = arr[num].eng;
   let findRus = arr[num].rus;
 
-  const heandleOption = e => setStr(e.target.value);
+  const heandleOption = (e) => setStr(e.target.value);
 
   const clickNext = () => {
     if (findRus === str) {
       arrAnswer.push({ eng: findEng, rus: str });
+      console.log(findRus, str, arrAnswer);
     }
     setNum((prev) => prev + 1);
     if (num > 13) {
@@ -54,11 +71,9 @@ function App() {
         <h2>
           {findEng} -{' '}
           <select onChange={heandleOption}>
-            {arr.map((item) => (
-              <option
-                key={item.eng}
-                value={item.rus}>
-                {item.rus}
+            {arrSort.map((item) => (
+              <option key={item} value={item}>
+                {item}
               </option>
             ))}
           </select>
