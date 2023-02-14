@@ -1,0 +1,24 @@
+.app{
+  width: 600px;
+  margin: 0 auto;
+  border: 2px solid grey;
+  padding: 20px;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+}
+
+.button{
+  background-color: rgb(193, 199, 255);
+  border: 1px solid rgb(193, 199, 255);
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.button:hover{
+  border: 1px solid black;
+  background-color: rgb(143, 154, 255);
+  cursor: pointer;
+}
