@@ -42,13 +42,16 @@ const arrAnswer = [];
 function App() {
   const [num, setNum] = React.useState(0);
   const [flag, setFlag] = React.useState(false);
-  const [str, setStr] = React.useState('соседство');
+  const [str, setStr] = React.useState('зі смаком');
   let findEng = arr[num].eng;
   let findRus = arr[num].rus;
 
   const heandleOption = (e) => setStr(e.target.value);
 
   const clickNext = () => {
+    if (findRus !== str) {
+      alert(`ти що даун ? це ж = (${findRus})`)
+    }
     if (findRus === str) {
       arrAnswer.push({ eng: findEng, rus: str });
       console.log(findRus, str, arrAnswer);
