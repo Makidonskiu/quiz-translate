@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Makidonskiu/quiz-translate.git/static/css/main.5c94a837.css",
+    "main.js": "/Makidonskiu/quiz-translate.git/static/js/main.26c95dd1.js",
+    "index.html": "/Makidonskiu/quiz-translate.git/index.html",
+    "main.5c94a837.css.map": "/Makidonskiu/quiz-translate.git/static/css/main.5c94a837.css.map",
+    "main.26c95dd1.js.map": "/Makidonskiu/quiz-translate.git/static/js/main.26c95dd1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5c94a837.css",
+    "static/js/main.26c95dd1.js"
+  ]
+}
