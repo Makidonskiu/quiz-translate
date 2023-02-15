@@ -6,6 +6,7 @@ export const Answers = ({arrAnswer, setFlag}) => {
     if(arrAnswer.length < 5) ask = `Ебать ты лох , я был о тебе лучшего мнения`
     if(arrAnswer.length < 10 && arrAnswer.length > 5) ask = `ну вроде ти не полный лох`
     if(arrAnswer.length > 10 && arrAnswer.length < 15) ask = `Ебать ты даже что-то учил )))`
+    if(arrAnswer.length === 15) ask = `Я не зрозумів ти що зубрив всю ніч ? Мої вітання YOU WINNER )))`
     const back = () => {
         setFlag(prev => !prev)
         arrAnswer.length = 0;
