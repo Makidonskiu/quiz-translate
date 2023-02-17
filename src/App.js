@@ -1,50 +1,19 @@
 import React from 'react';
 
 import { Answers } from './components/Answers';
+import { arr, arrSort } from './components/back/back';
 
 import './App.css';
-const arrSort = [
-  'зі смаком',
-  'маленький',
-  'безвкусний',
-  'підмітати',
-  'сходи',
-  'соседство',
-  'не комфортний',
-  'стікляна криша',
-  'замок',
-  'веранда',
-  'фарбувати',
-  'газон',
-  'просторий',
-  'орендувати',
-  'переїзд',
-];
-const arr = [
-  { eng: 'neighborhood', rus: 'соседство' },
-  { eng: 'uncomfortable', rus: 'не комфортний' },
-  { eng: 'tiny', rus: 'маленький' },
-  { eng: 'tasteless', rus: 'безвкусний' },
-  { eng: 'tasteful', rus: 'зі смаком' },
-  { eng: 'sweep', rus: 'підмітати' },
-  { eng: 'stairs', rus: 'сходи' },
-  { eng: 'skylight', rus: 'стікляна криша' },
-  { eng: 'roomy', rus: 'просторий' },
-  { eng: 'rent', rus: 'орендувати' },
-  { eng: 'porch', rus: 'веранда' },
-  { eng: 'paint', rus: 'фарбувати' },
-  { eng: 'move', rus: 'переїзд' },
-  { eng: 'lock', rus: 'замок' },
-  { eng: 'lawn', rus: 'газон' },
-];
+
 const arrAnswer = [];
 
 function App() {
+  const [indexButton, setIndexButton] = React.useState(0);
   const [num, setNum] = React.useState(0);
   const [flag, setFlag] = React.useState(false);
   const [str, setStr] = React.useState('зі смаком');
-  let findEng = arr[num].eng;
-  let findRus = arr[num].rus;
+  let findEng = arr[indexButton][num].eng;
+  let findRus = arr[indexButton][num].rus;
 
   const heandleOption = (e) => setStr(e.target.value);
 
@@ -57,7 +26,7 @@ function App() {
       console.log(findRus, str, arrAnswer);
     }
     setNum((prev) => prev + 1);
-    if (num > 13) {
+    if (num >= arr[indexButton].length - 1) {
       setNum(0);
       setFlag((prev) => !prev);
     }
@@ -70,11 +39,12 @@ function App() {
   return (
     <>
       <div className="app">
+      {arr.map((_, i)=> <button onClick={()=> setIndexButton(i)}>{i + 1} page</button>)}
         <h1>English translete:</h1>
         <h2>
           {findEng} -{' '}
           <select onChange={heandleOption}>
-            {arrSort.map((item) => (
+            {arrSort(indexButton).map((item) => (
               <option key={item} value={item}>
                 {item}
               </option>
