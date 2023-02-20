@@ -1,0 +1,14 @@
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-word{
+    width: 400px;
+    margin: 50px auto;
+    padding: 6px;
+    border: solid 1px grey;
+    border-radius: 5px;
+    min-height: 150px;
+}
