@@ -1,4 +1,4 @@
-export const arr = [
+export let arr = [
   [
     { eng: 'neighborhood', rus: 'соседство' },
     { eng: 'uncomfortable', rus: 'не комфортний' },

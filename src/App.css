@@ -27,11 +27,21 @@ input:focus{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 5px;
+}
+
+.app-page{
+  display: flex;
+}
+
+.app-times{
+  color: red;
+  cursor: pointer;
 }
 
 .app-button{
   border-radius: 5px;
-  padding: 5px;
+  padding: 2px;
   background-color: green;
   cursor: pointer;
 }

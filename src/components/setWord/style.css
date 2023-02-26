@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+}
+
 .flex{
     display: flex;
     align-items: center;
@@ -5,10 +9,21 @@
 }
 
 .input-word{
-    width: 400px;
+    max-width: 431px;
     margin: 50px auto;
     padding: 6px;
     border: solid 1px grey;
     border-radius: 5px;
     min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.add-page{
+    margin-top: 5px;
+}
+
+.m-rigth{
+    margin-right: 5px;
 }
